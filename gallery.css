@@ -61,3 +61,61 @@
 .hidden-gallery.show .gallery-item {
     animation: fadeInUp 0.6s ease-out forwards;
 }
+
+/* Default styles for larger screens remain unchanged */
+
+/* Adjust gallery styles for smaller screens */
+@media (max-width: 768px) {
+    .gallery-image-wrapper {
+        height: 200px; /* Reduce height for smaller screens */
+    }
+
+    .gallery-info {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .gallery-item {
+        margin-bottom: 15px; /* Add spacing between items */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-image-wrapper {
+        height: 150px; /* Further reduce height for mobile devices */
+    }
+
+    .gallery-info {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+}
+
+button, a {
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        margin-left: auto; /* Push the toggler to the right */
+    }
+}
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        margin: 0; /* Remove negative margins */
+        width: 40px; /* Adjust width for smaller screens */
+        height: 40px; /* Adjust height for smaller screens */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px; /* Adjust icon size */
+        height: 20px;
+    }
+}

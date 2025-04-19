@@ -194,6 +194,8 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  max-width: 100%;
+  height: auto;
 }
 
 svg {
@@ -261,13 +263,12 @@ select {
   word-wrap: normal;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  /* -webkit-appearance: button; */
-}
 
+@media (max-width: 768px) {
+  .navbar-toggler {
+      margin-left: auto; /* Push the toggler to the right */
+  }
+}
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -330,7 +331,7 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -406,7 +407,25 @@ h4, .h4 {
     font-size: calc(1.275rem + 0.3vw) ;
   }
 }
+@media (max-width: 768px) {
+  .navbar-toggler {
+      margin-left: auto; /* Push the toggler to the right */
+  }
+}
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+      margin: 0; /* Remove negative margins */
+      width: 40px; /* Adjust width for smaller screens */
+      height: 40px; /* Adjust height for smaller screens */
+  }
 
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      width: 20px; /* Adjust icon size */
+      height: 20px;
+  }
+}
 h5, .h5 {
   font-size: 1.25rem;
 }
@@ -3484,7 +3503,6 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -9767,4 +9785,57 @@ h6,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+/* Adjust global styles for mobile devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce font size for better readability */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .container {
+        padding: 15px; /* Adjust container padding */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Align nav links vertically */
+        align-items: center;
+    }
+
+    .carousel-caption {
+        font-size: 1rem; /* Adjust font size for carousel captions */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: calc(1rem + 1vw); /* Scale headings dynamically */
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 12px; /* Further reduce font size for mobile */
+    }
+
+    .container {
+        padding: 10px; /* Reduce container padding */
+    }
+
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .carousel-caption {
+        font-size: 0.875rem; /* Smaller font size for captions */
+    }
+
+    .destination-item img {
+        height: auto; /* Ensure images scale properly */
+        width: 100%; /* Full width for mobile */
+    }
 }
