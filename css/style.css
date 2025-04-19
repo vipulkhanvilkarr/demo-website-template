@@ -407,25 +407,7 @@ h4, .h4 {
     font-size: calc(1.275rem + 0.3vw) ;
   }
 }
-@media (max-width: 768px) {
-  .navbar-toggler {
-      margin-left: auto; /* Push the toggler to the right */
-  }
-}
-@media (max-width: 768px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-      margin: 0; /* Remove negative margins */
-      width: 40px; /* Adjust width for smaller screens */
-      height: 40px; /* Adjust height for smaller screens */
-  }
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-      width: 20px; /* Adjust icon size */
-      height: 20px;
-  }
-}
 h5, .h5 {
   font-size: 1.25rem;
 }
