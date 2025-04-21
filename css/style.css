@@ -529,6 +529,7 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto;
+  
 }
 
 .img-thumbnail {
@@ -2627,6 +2628,12 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #212121;
   border-color: #212121;
+}
+
+@media (max-width:576px){
+  .btn-dark {
+    opacity: 0.9;
+  }
 }
 
 .btn-dark:hover {
@@ -5862,6 +5869,17 @@ a.close.disabled {
   transition: transform 0.6s ease-in-out;
 }
 
+.carousel-item > img{
+  height: 90vh;
+  object-fit: cover;
+}
+
+@media (max-width : 576px){
+  .carousel-item > img{
+    height: 60vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
     transition: none;
@@ -5965,6 +5983,11 @@ a.close.disabled {
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+.nav-item.nav-link.active {
+  color: green !important;
+  font-weight: bold;
+  border-bottom: 2px solid green;
 }
 
 .carousel-indicators {
@@ -9140,6 +9163,9 @@ button.bg-dark:focus {
   content: "";
   background-color: rgba(0, 0, 0, 0);
 }
+
+/* corosual responsive  */
+
 
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;

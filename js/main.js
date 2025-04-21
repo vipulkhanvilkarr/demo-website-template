@@ -102,3 +102,25 @@ var swiper = new Swiper('.swiper-container', {
             viewMoreBtn.textContent = 'View More';
         }
    }
+
+   document.addEventListener("DOMContentLoaded", function () {
+    // Get the current page URL
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Remove active class from all nav links
+    document.querySelectorAll('.nav-item.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add active class to the current page link
+    if (currentPage === "index.html") {
+        document.getElementById("homeLink").classList.add("active");
+    } else if (currentPage === "about.html") {
+        document.getElementById("aboutLink").classList.add("active");
+    } else if (currentPage === "gallery.html") {
+        document.getElementById("galleryLink").classList.add("active");
+    } else if (currentPage === "contact.html") {
+        document.getElementById("contactLink").classList.add("active");
+    }
+});
+
